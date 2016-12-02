@@ -10,8 +10,29 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.jamesharrison.editablelistview.MainActivity">
 
-    <TextView
+   <EditText
+       android:layout_width="match_parent"
+       android:layout_height="40dp"
+       android:id="@+id/editText"
+       android:layout_marginTop="100dp"/>
+    
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:layout_margin="20dp"
+        android:layout_below="@+id/editText"
+        android:text="Add"
+        android:id="@+id/btnAdd"
+        />
+
+    <Button
+        android:layout_margin="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/btnAdd"
+        android:text="View Contents"
+        android:id="@+id/btnView"
+        android:layout_below="@+id/editText"/>
+
+
 </RelativeLayout>
