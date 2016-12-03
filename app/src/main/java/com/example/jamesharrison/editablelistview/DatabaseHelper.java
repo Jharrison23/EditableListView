@@ -1,11 +1,10 @@
 package com.example.jamesharrison.editablelistview;
 
-import android.app.ActionBar;
+import android.content.ContentValues;
+import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.content.Context;
-import android.content.ContentValues;
 /**
  * Created by jamesharrison on 12/1/16.
  */
@@ -32,7 +31,7 @@ public class DatabaseHelper extends SQLiteOpenHelper
     public void onCreate(SQLiteDatabase db)
     {
         String createTable = "CREATE TABLE " + TABLE_NAME + "(ID INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                "ITEM 1 TEXT)";
+                "ITEM1 TEXT)";
 
         db.execSQL(createTable);
     }

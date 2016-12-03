@@ -1,11 +1,11 @@
 package com.example.jamesharrison.editablelistview;
 
-import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.webkit.WebView;
-import android.widget.EditText;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -27,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
         btnAdd = (Button) findViewById(R.id.btnAdd);
 
         btnView = (Button) findViewById(R.id.btnView);
+
+        myDB = new DatabaseHelper(this);
 
         // when the add button is clicked
         btnAdd.setOnClickListener(new View.OnClickListener() {
@@ -54,6 +56,19 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+
+        btnView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view)
+            {
+                Intent intent = new Intent(MainActivity.this, ViewListContents.class);
+
+                startActivity(intent);
+
+            }
+        });
+
 
     }
 
